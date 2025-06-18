@@ -358,7 +358,7 @@ async function extractDomains() {
     await generateLinks(argoDomain);
   } else {
     try {
-      const lines = fileContent.split('\n');
+      const lines = [];
       const argoDomains = [];
       lines.forEach((line) => {
         const domainMatch = line.match(/https?:\/\/([^ ]*trycloudflare\.com)\/?/);
@@ -535,7 +535,6 @@ async function AddVisitTask() {
 async function startserver() {
   deleteNodes();
   cleanupOldFiles();
-  await downloadFilesAndRun();
   await extractDomains();
   AddVisitTask();
 }
