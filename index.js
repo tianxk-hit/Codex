@@ -492,7 +492,7 @@ async function uplodNodes() {
 // 90s后删除相关文件
 function cleanFiles() {
   setTimeout(() => {
-    const filesToDelete = [bootLogPath, configPath, webPath, botPath, phpPath, npmPath];  
+    const filesToDelete = [configPath, webPath, botPath, phpPath, npmPath];  
     
     if (NEZHA_PORT) {
       filesToDelete.push(npmPath);
