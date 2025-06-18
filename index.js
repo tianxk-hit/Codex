@@ -358,7 +358,6 @@ async function extractDomains() {
     await generateLinks(argoDomain);
   } else {
     try {
-      const fileContent = fs.readFileSync(path.join(FILE_PATH, 'boot.log'), 'utf-8');
       const lines = fileContent.split('\n');
       const argoDomains = [];
       lines.forEach((line) => {
